@@ -1,0 +1,199 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 536 440 704 456)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "CLK_IN" (rect 5 0 43 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 480 432 536 456))
+)
+(pin
+	(input)
+	(rect 536 456 704 472)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "RX" (rect 5 0 19 17)(font "Intel Clear" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect 472 456 536 480))
+)
+(pin
+	(output)
+	(rect 1048 456 1224 472)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "TX" (rect 90 0 101 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+	(annotation_block (location)(rect 1224 448 1288 472))
+)
+(symbol
+	(rect 752 416 1016 528)
+	(text "UART" (rect 5 0 34 12)(font "Arial" ))
+	(text "UART9600" (rect 8 96 61 108)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 14 12)(font "Arial" ))
+		(text "clk" (rect 21 27 35 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "rx" (rect 0 0 9 12)(font "Arial" ))
+		(text "rx" (rect 21 43 30 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "tx_en" (rect 0 0 27 12)(font "Arial" ))
+		(text "tx_en" (rect 21 59 48 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "tx_data_buffer[7..0]" (rect 0 0 99 12)(font "Arial" ))
+		(text "tx_data_buffer[7..0]" (rect 21 75 120 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 264 32)
+		(output)
+		(text "rx_done" (rect 0 0 38 12)(font "Arial" ))
+		(text "rx_done" (rect 211 27 243 39)(font "Arial" ))
+		(line (pt 264 32)(pt 248 32))
+	)
+	(port
+		(pt 264 48)
+		(output)
+		(text "tx" (rect 0 0 9 12)(font "Arial" ))
+		(text "tx" (rect 236 43 243 55)(font "Arial" ))
+		(line (pt 264 48)(pt 248 48))
+	)
+	(port
+		(pt 264 64)
+		(output)
+		(text "tx_ready" (rect 0 0 43 12)(font "Arial" ))
+		(text "tx_ready" (rect 207 59 243 71)(font "Arial" ))
+		(line (pt 264 64)(pt 248 64))
+	)
+	(port
+		(pt 264 80)
+		(output)
+		(text "rx_data_buffer[7..0]" (rect 0 0 99 12)(font "Arial" ))
+		(text "rx_data_buffer[7..0]" (rect 160 75 243 87)(font "Arial" ))
+		(line (pt 264 80)(pt 248 80)(line_width 3))
+	)
+	(parameter
+		"clk_per_bit"
+		"1042"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(rectangle (rect 16 16 248 96))
+	)
+	(annotation_block (parameter)(rect 536 352 720 392))
+)
+(connector
+	(pt 1024 448)
+	(pt 1016 448)
+)
+(connector
+	(pt 1048 496)
+	(pt 1016 496)
+	(bus)
+)
+(connector
+	(pt 1048 536)
+	(pt 704 536)
+	(bus)
+)
+(connector
+	(pt 1048 496)
+	(pt 1048 536)
+	(bus)
+)
+(connector
+	(pt 704 496)
+	(pt 704 536)
+	(bus)
+)
+(connector
+	(pt 1024 448)
+	(pt 1024 560)
+)
+(connector
+	(pt 1024 560)
+	(pt 736 560)
+)
+(connector
+	(pt 752 480)
+	(pt 736 480)
+)
+(connector
+	(pt 704 496)
+	(pt 752 496)
+	(bus)
+)
+(connector
+	(pt 736 480)
+	(pt 736 560)
+)
+(connector
+	(pt 704 464)
+	(pt 752 464)
+)
+(connector
+	(pt 704 448)
+	(pt 752 448)
+)
+(connector
+	(pt 1016 464)
+	(pt 1048 464)
+)
