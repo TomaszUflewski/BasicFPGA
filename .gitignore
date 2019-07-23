@@ -28,3 +28,6 @@ VGA/greybox_tmp/cbx_args.txt
 *.sof
 *.cmp
 *.ppf
+FIFO-UART/incremental_db/README
+*.qsf
+*.qpf
