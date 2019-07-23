@@ -9,7 +9,6 @@ end FIFO_TB;
 
 
 architecture behav of FIFO_TB is
-signal dupa1 :  std_logic_vector(3 downto 0);
 signal clk 		: std_logic := '0';
 signal in_data 		: std_logic_vector(7  downto 0);
 signal enable_in 	: std_logic;
@@ -24,7 +23,7 @@ constant clk_period : time := 200 ps;
 begin
 
 DUT : entity work.fifo(rtl)
-	port map (dupa1,
+	port map (
 	clk,
 	in_data,
 	enable_in,
